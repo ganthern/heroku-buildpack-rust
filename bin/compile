@@ -65,14 +65,14 @@ application, try setting your buildpack to:
 
   https://github.com/emk/heroku-buildpack-rust.git#old-rust
 EOF
-
->&2 echo "${BUILD_DIR} "
->&2 echo "${CACHE_DIR}"
->&2 echo "${ENV_DIR}"
->&2 echo "${BP_DIR}"
->&2 echo "${BUILD_PATH}"
     exit 1
 fi
+
+>&2 echo "BUILD_DIR=${BUILD_DIR} "
+>&2 echo "CACHE_DIR=${CACHE_DIR} "
+>&2 echo "ENV_DIR=${ENV_DIR} "
+>&2 echo "BP_DIR=${BP_DIR} "
+>&2 echo "BUILD_PATH=${BUILD_PATH} "
 
 # Handle people who still aren't using Rustup.
 if [ ! -z ${URL+x} ]; then
