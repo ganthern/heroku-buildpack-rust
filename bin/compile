@@ -65,6 +65,8 @@ application, try setting your buildpack to:
 
   https://github.com/emk/heroku-buildpack-rust.git#old-rust
 EOF
+
+>&2 echo "${BUILD_DIR} \n ${CACHE_DIR} \n ${ENV_DIR} \n ${BP_DIR}"
     exit 1
 fi
 
