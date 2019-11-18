@@ -2,7 +2,7 @@
 
 # Find all the directories we might need (based on
 # heroku-buildpack-nodejs code).
-BUILD_DIR=${1:-}
+BUILD_DIR="${1:-}/sheetah-app/"
 CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
@@ -66,7 +66,11 @@ application, try setting your buildpack to:
   https://github.com/emk/heroku-buildpack-rust.git#old-rust
 EOF
 
->&2 echo "${BUILD_DIR} \n ${CACHE_DIR} \n ${ENV_DIR} \n ${BP_DIR}"
+>&2 echo "${BUILD_DIR} "
+>&2 echo "${CACHE_DIR}"
+>&2 echo "${ENV_DIR}"
+>&2 echo "${BP_DIR}"
+>&2 echo "${BUILD_PATH}"
     exit 1
 fi
 
