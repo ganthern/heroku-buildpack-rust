@@ -71,6 +71,7 @@ curl https://sh.rustup.rs -sSf > rustup.sh
 chmod u+x rustup.sh
 echo "-----> Using rustup to install Rust channel $VERSION"
 ./rustup.sh -y --default-toolchain "$VERSION"
+rustup target add wasm32-unknown-unknown
 rm rustup.sh
 
 if [ ! -x "$CARGO_HOME/bin/rustc" ]; then
